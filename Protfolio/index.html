@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ef73df3838.js" crossorigin="anonymous"></script>    
+    
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+    
+        /* for hiding contents when we will click on link*/
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");/*display the color particularly*/
+            /* the tabname means when we will click on education it will show only education content*/
+           document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        /* for side menu */
+        function openmenu(){
+            document.getElementById("sidemenu").style.right="0";//whenevr right =0 it willbe visible
+        }
+        function closemenu(){
+            document.getElementById("sidemenu").style.right="-200px";
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                   <h1 class="logo">
+                        <span>N</span>eha.
+                    </h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"> </i>
+                </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Web Developer</p>
+                <h1>Hi, I'm <span>Neha</span><br/> From India.</h1>
+            </div>
+        </div>
+    </div> 
+<!-------------about--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-info">I'm a student of Gaya College Gaya, Bihar.<br/>My Standard Qualification is B.C.A. <br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati saepe ea velit cumque illo doloribus aperiam corporis quae porro omnis?</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link"  onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"  onclick="opentab('exprience')">Projects</p>
+                    <p class="tab-links"  onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab " id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br/>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br/>Designing Web/App interfaces</li>
+                        <li><span>App Development</span><br/>Designing Web/App interfaces</li>
+                        <li><span>Microsoft Office</span><br/>
+                            <li>Powerpoint Presentation</li>
+                            <li>MS.Excel</li>
+                            <li>Domestic Data Entery Operator [DDEO]</li>
+                        </li>
+                        <li><span>Blog</span></li>
+                        <li><span>Programming Language</span>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>Java - AWT, Swing [CurrenlyLearning] </li>
+                        </li>
+                        <li><span>Web Language</span>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>Ajax</li>
+                            <li>Json</li>
+                            <li>PHP</li>
+                        </li>
+                        <li><span>Web Framework</span>
+                            <li>Angular  [CurrenlyLearning]</li>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="exprience">
+                    <ul>
+                        <li><span>Portfolio</span><br/>Complete Responsive Website using HTML,CSS,JavaScript and Angular Framework.</li>
+                        <li><span>Online Shopping App/Web</span><br/>Complete Responsive Website using HTML,CSS,JavaScript and React Framework</li>
+                        <li><span>Music App/Web</span><br/>Complete Responsive Website using HTML5,CSS,JavaScript.</li>
+                        <li><span>Social Media App/Web</span><br/>Complete Responsive Website using HTML,CSS,JavaScript, PHP and PhpMyAdmin.</li>
+                        <li><span>TikTakToe,NumerocPuzzle Game</span><br/>Complete Responsive Website using HTML,CSS,JavaScript and Bootstrap.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br/>BCA from Gaya College Gaya.<li>
+                        <li><span>2021</span><br/>12th Board or Intermediate from Mirza Galib College Gaya [BSEB, Patna].<li>
+                        <li><span>2020</span><br/>Certified as a Data Entery Operator from Dr. Shivanand Art Collage Gaya .</li>
+                        <li><span>2019</span><br/>10th Borad or Matric from Gyan Bharti Public School Paharpur Cantt Gaya Bihar [CBSE, India].</li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div> 
+  
+<!-------------services--------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i> 
+               <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>App Developer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Powerpoint Presentation</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>MS.Excel</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Data Entery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Blog</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore exercitationem maiores ratione inventore quibusdam corrupti, ullam doloribus similique in quam debitis repellat quidem, provident quasi eligendi mollitia, rerum explicabo et?</p>
+                <a href="">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------myWork--------------->
+<div id="myWork">
+    <div class="container">
+            <h1 class="sub-titles">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/work-1.png" >
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis eius incidunt reiciendis libero placeat modi soluta quod temporibus fugiat?
+                    <br/>Download it from play store.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work-2.png" >
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis eius incidunt reiciendis libero placeat modi soluta quod temporibus fugiat?
+                    <br/>Download it from play store.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work-3.png" >
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis eius incidunt reiciendis libero placeat modi soluta quod temporibus fugiat?
+                    <br/>Download it from play store.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">See More</a>
+    </div>
+</div>
+<!-------------contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>NehaKumari0xf@gmail.com</p>
+                <p><i class="fa fa-phone-square-alt"></i>9471755474</p>
+                <div class="social-icons">
+                    <a href="https://github.com/NehaKumari0xf"><i class="fab fa-github"></i></a>
+                    <a href="https://www.slideshare.net/nehakumari0xf"><i class="fab fa-slideshare"></i></a>
+                </div>
+                <a href="#" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="name" placeholder="Enter Your Name" required/>
+                    <input type="email" name="email" placeholder="Enter Your E-mail" required/>
+                    <textarea name="message"  rows="10" placeholder="Enter Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Neha. Made with <i class="fas fa-heart"></i> by w3school Tutorials</p>
+    </div>
+</div>
+</body>
+</html>
